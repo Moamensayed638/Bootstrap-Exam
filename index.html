@@ -970,6 +970,26 @@
         loopCount: Infinity,
       });
     </script>
+
+
+    <script>
+    window.addEventListener("scroll", function () {
+        const nav = document.getElementById("nav");
+        const home = document.getElementById("home");
+
+        // نهاية ال home section
+        const homeBottom = home.offsetTop + home.offsetHeight;
+
+        if (window.scrollY >= homeBottom - 100) {
+        nav.classList.add("scrolled");
+        } else {
+        nav.classList.remove("scrolled");
+        }
+    });
+</script>
+
+
+
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
